@@ -1,0 +1,83 @@
+// Define the Car class
+class Car {
+    // Attributes of the Car class
+     String brand;
+   String model;
+    int year;
+     double price;
+     String fuelType; // e.g., Petrol, Diesel, Electric
+     double engineCapacity; // in liters
+     String color;
+     double mileage; // in km/l
+
+    // Constructor
+    public Car(String brand, String model, int year, double price, String fuelType,
+               double engineCapacity, String color, double mileage) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+        this.price = price;
+        this.fuelType = fuelType;
+        this.engineCapacity = engineCapacity;
+        this.color = color;
+        this.mileage = mileage;
+    }
+
+    // Getter methods
+    public String getBrand() {
+        return brand;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public String getFuelType() {
+        return fuelType;
+    }
+
+    public double getEngineCapacity() {
+        return engineCapacity;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public double getMileage() {
+        return mileage;
+    }
+
+    // Method to display car details
+    public void displayDetails() {
+        System.out.println("Car Details:");
+        System.out.println("Brand: " + brand);
+        System.out.println("Model: " + model);
+        System.out.println("Year: " + year);
+        System.out.println("Price: $" + price);
+        System.out.println("Fuel Type: " + fuelType);
+        System.out.println("Engine Capacity: " + engineCapacity + "L");
+        System.out.println("Color: " + color);
+        System.out.println("Mileage: " + mileage + " km/l");
+    }
+}
+
+// Main class to test the Car class
+public class Main {
+    public static void main(String[] args) {
+        // Create an object of the Car class
+        Car car1 = new Car("Tesla", "Model 3", 2024, 45000.0, "Electric",
+                           0.0, "White", 500.0);
+
+        // Display car details
+        car1.displayDetails();
+    }
+}
